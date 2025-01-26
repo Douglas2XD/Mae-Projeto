@@ -1,0 +1,83 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+background-color: #F8BBD0;
+margin: 0;
+padding: 20px;
+}
+
+.card-text {
+    font-size: 1.5rem;  
+    font-weight: bold;  
+    color: green;  
+    border: 2px solid green;  
+    padding: 5px 10px;  
+    border-radius: 10px;  
+    background-color: #f8f8f8;  
+}
+
+.navbar {
+    color: white;
+    background-color: #F48FB1 ; 
+}
+.navbar-nav .nav-link {
+    font-weight: 500;
+    font-size: 1.1rem;
+           
+}
+p{
+    font-size: 20px;
+}
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 55px; 
+}
+
+
+#home .banner img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (min-width: 768px) {
+    #home .banner img {
+        max-width: 60%; 
+    }
+}
+
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+footer {
+    background-color: #FAF3F3;
+    color: black;
+}
+
+footer h3 {
+    font-size: 1.2rem;
+}
+
+
+.contact-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Customizando o botão de navegação */
+.navbar-toggler-icon {
+    background-color: #333;
+}
+
+/* Para melhorar o espaçamento entre seções */
+section {
+    margin-bottom: 50px;
+}
