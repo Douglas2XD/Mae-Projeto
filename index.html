@@ -2,111 +2,198 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./assets/images/favicon.svg" />
-    <meta name="theme-color" content="#0038FF" />
     <title>Karmen Carneiro | Depiladora</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #f8bbd0;
+            --text-color: #333;
+            --light-bg: #fff5f8;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: var(--light-bg);
+        }
+
+        .hero img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 1rem;
+        }
+
+        .contact {
+            background-color: var(--light-bg);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #ff4d94;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="cursor"></div>
-    <nav class="navbar fixed-top" style="background-color: #F48FB1;">
-        <ul class="navbar-nav" style="display: flex; width: 100%; padding: 5px; list-style-type: none;">
+    <header class="header">
+        <h1>Karmen Carneiro | Depiladora</h1>
+    </header>
 
-            <div style="display: flex; gap: 25px;">
-                <li class="nav-item" style="margin-right: 20px;"><a class="nav-link" href="#about" style="color: #fff;">Quem sou</a></li>
-                <li class="nav-item" style="margin-right: 20px;"><a class="nav-link" href="#projects" style="color: #fff;">Meu Trabalho</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact" style="color: #fff;">Contato</a></li>
+    <section class="hero">
+        <img src="mae.jpg" alt="Karmen Carneiro - Depiladora">
+        <h2>Karmen Carneiro</h2>
+        <p>Depiladora profissional</p>
+        <p>Atendimento a domicílio em São João da Fronteira, Piripiri e Teresina</p>
+    </section>
+
+    <section class="services">
+        <h2>Meus Serviços</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://img.freepik.com/fotos-gratis/pernas-femininas-perfeitas-isoladas-no-fundo-branco_231208-10242.jpg" alt="Pernas">
+                <h3>Pernas</h3>
+                <p>R$ 34.99</p>
             </div>
-        </ul>        
-    </nav>
-<br><br><br><br>
-    <main>
-        <section id="home" class="d-flex justify-content-center align-items-center">
-            <div class="informations">
-                <span>Olá, eu sou</span>
-                <h1>Karmen Estética.</h1>
-                <p>Depiladora profissional.</p>
+
+            <div class="service-card">
+                <img src="https://redemetamorfose.org//images/fotos/servi_o_depilacaofemininaaxila_1.png" alt="Axilas">
+                <h3>Axilas</h3>
+                <p>R$ 19.99</p>
             </div>
-            <div class="banner">
-                <img id="minha_foto" src="mae.jpg" alt="icon photo" class="img-fluid" />
-            </div>
-        </section>
-        <hr style="width: 50%;">
-        <section id="about" class="container py-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2 class="text-center mb-4 ">Quem sou</h2>
-                    <p>Sou Karmen Carneiro, depiladora especializada em cera. Atendo mulheres a domicílio em São João da Fronteira, Piripiri e Teresina.
-                        
-                    </p>
-                </div>
-            </div>
-        </section>
-        <hr style="width: 50%;">
-        <section id="projects" class="container py-5">
-    <h2 class="text-center mb-4">Meu trabalho <i class="fa-solid fa-laptop-code"></i></h2>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-4 mb-4"> <!-- Adicionando mb-4 para espaçamento entre as colunas -->
-                <div class="card" style="width: 18rem;">
-                    <img src="https://img.freepik.com/fotos-gratis/pernas-femininas-perfeitas-isoladas-no-fundo-branco_231208-10242.jpg" class="card-img-top" alt="Imagem do Card">
-                    <div class="card-body">
-                        <h5 class="card-title">Pernas</h5>
-                        <p class="card-text">R$ 34.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 mb-4"> <!-- Adicionando mb-4 para espaçamento entre as colunas -->
-                <div class="card" style="width: 18rem;">
-                    <img src="https://redemetamorfose.org//images/fotos/servi_o_depilacaofemininaaxila_1.png" class="card-img-top" alt="Imagem do Card">
-                    <div class="card-body">
-                        <h5 class="card-title">Axilas</h5>
-                        <p class="card-text">R$ 19.99</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-4 mb-4"> <!-- Adicionando mb-4 para espaçamento entre as colunas -->
-                <div class="card" style="width: 18rem;">
-                    <img src="https://www.marybeleza.com.br/dicas/wp-content/uploads/2022/01/principais-cuidados-na-hora-de-fazer-depilacao-intima-20210611125327.jpg.jpg" class="card-img-top" alt="Imagem do Card">
-                    <div class="card-body">
-                        <h5 class="card-title">Depilação Íntima Completa</h5>
-                        <p class="card-text">R$ 44.99</p>
-                    </div>
-                </div>
+
+            <div class="service-card">
+                <img src="https://www.marybeleza.com.br/dicas/wp-content/uploads/2022/01/principais-cuidados-na-hora-de-fazer-depilacao-intima-20210611125327.jpg.jpg" alt="Depilação Íntima Completa">
+                <h3>Depilação Íntima Completa</h3>
+                <p>R$ 44.99</p>
             </div>
         </div>
-    </div>
-</section>
-<hr style="width: 50%;">
-        <section id="contact" class="container py-5">
-            <h2 class="text-center mb-4">Contato</h2>
-            <div class="d-flex justify-content-center gap-3 contact-icons">
-                <a href="https://www.instagram.com/karmencarneiro" target="_blank" class="text-decoration-none">
-                    <img src="https://cdn-icons-png.freepik.com/256/15707/15707869.png?semt=ais_hybrid" alt="Instagram">
-                </a>
-                <a href="https://wa.me/+558881087022" target="_blank" class="text-decoration-none">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt="WhatsApp">
-                </a>
-            </div>
-        </section>
-    </main>
-    
-    <footer class="text-center py-4" style="background-color: #F8BBD0;">
-        <h3><span class="year-footer"></span> Agende já !
-        <br>
-            obs: Atendo a domicílio 
-        </h3>
-    </footer>
+    </section>
 
+    <section class="contact">
+        <h2>Contato</h2>
+        <div class="contact-info">
+            <p>Atendemos de Segunda a Sábado, das 9h às 19h</p>
+            <p>📍 São João da Fronteira, Piripiri e Teresina</p>
+            <p>📱 (88) 9.8108-7022</p>
+            <a href="https://wa.me/+558881087022" class="contact-button">Agendar pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Karmen Carneiro - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
-
-
