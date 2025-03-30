@@ -41,11 +41,12 @@
         }
 
         .hero img {
-            width: 200px;
-            height: 200px;
+            width: 300px;  /* Aumentado de 200px para 300px */
+            height: 300px; /* Aumentado de 200px para 300px */
             border-radius: 50%;
             border: 4px solid var(--primary-color);
             margin-bottom: 2rem;
+            object-fit: cover; /* Garante que a imagem mantenha a proporção */
         }
 
         .services {
@@ -61,7 +62,7 @@
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Aumentado de 250px para 300px */
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -81,9 +82,11 @@
         }
 
         .service-card img {
-            width: 80px;
-            height: 80px;
+            width: 200px;  /* Aumentado de 80px para 200px */
+            height: 200px; /* Aumentado de 80px para 200px */
             margin-bottom: 1rem;
+            object-fit: cover; /* Mantém a proporção da imagem */
+            border-radius: 10px; /* Adiciona bordas arredondadas */
         }
 
         .service-card h3 {
@@ -122,6 +125,7 @@
             text-decoration: none;
             margin-top: 1rem;
             transition: background-color 0.3s ease;
+            font-size: 1.1rem; /* Aumentado o tamanho da fonte */
         }
 
         .contact-button:hover {
@@ -144,6 +148,16 @@
             .hero {
                 padding: 2rem 1rem;
             }
+            
+            .hero img {
+                width: 250px; /* Tamanho reduzido para dispositivos móveis */
+                height: 250px;
+            }
+            
+            .service-card img {
+                width: 150px; /* Tamanho reduzido para dispositivos móveis */
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -165,19 +179,19 @@
             <div class="service-card">
                 <img src="https://img.freepik.com/fotos-gratis/pernas-femininas-perfeitas-isoladas-no-fundo-branco_231208-10242.jpg" alt="Pernas">
                 <h3>Pernas</h3>
-                <p>R$ 34.99</p>
+                <p class="price">R$ 34.99</p>
             </div>
 
             <div class="service-card">
                 <img src="https://redemetamorfose.org//images/fotos/servi_o_depilacaofemininaaxila_1.png" alt="Axilas">
                 <h3>Axilas</h3>
-                <p>R$ 19.99</p>
+                <p class="price">R$ 19.99</p>
             </div>
 
             <div class="service-card">
                 <img src="https://www.marybeleza.com.br/dicas/wp-content/uploads/2022/01/principais-cuidados-na-hora-de-fazer-depilacao-intima-20210611125327.jpg.jpg" alt="Depilação Íntima Completa">
                 <h3>Depilação Íntima Completa</h3>
-                <p>R$ 44.99</p>
+                <p class="price">R$ 44.99</p>
             </div>
         </div>
     </section>
